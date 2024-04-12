@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Group 11</title>
+		<meta charset="utf-8" >
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+		<link rel="stylesheet" href="assets/css/main.css">
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" ></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Monitoring Natural Disasters: Enhancing Awareness and Response</h1>
+								<p>Our Group aims to provide real-time insights into <a href="https://fleming.maps.arcgis.com/apps/dashboards/8a2d1b7e63964577b6f9c015d7551d9a">natural hazards such as forest fires, Tornado and Wind Speed across the USA and Canada</a>. Leveraging the advanced capabilities of ArcGIS Dashboard and <a href="https://storymaps.arcgis.com/stories/5abc1f17b7b74ac8928e2589fb043d8c">Story Map</a>, we offer dynamic visualizations that showcase live data feeds, enabling stakeholders to monitor and respond to evolving threats effectively of U.S.A. and Canada.</p>
+							
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="#intro">INTRODUCTION</a></li>
+								<li><a href="#problem">PROBLEM STATEMENT</a></li>
+								<li><a href="#methods">METHODOLOGY</a></li>
+								<li><a href="#about">SOLUTION</a></li>
+								<li><a href="#team">TEAM</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Intro -->
+							<article id="intro">
+								<h2 class="major">Introduction</h2>
+								<span class="image main"><img src="images/Intro.jpg" alt="" ></span>
+								<p>Over the past five weeks of our GEOM099 course, we explored various web technologies, with a keen eye on Geographic Information Systems (GIS) tools. 
+									As a group, we are dedicated to enhancing disaster awareness and fostering rapid response by monitoring active natural disasters. 
+									We focused on creating a comprehensive web interface to provide real-time data compilation on natural disasters over Canada and the US, specifically earthquakes, wildfires, and tornadoes. </p>
+								<p>We aimed to design a solution that not only aggregates and visualizes live disaster data effectively but also prioritizes ease of use for end users. 
+									ArcGIS suite stood out for its intuitive interface and robust features. We included ArcGIS Online as for database management and web map creation, ArcGIS Dashboards to showcase data in a straightforward way, and ArcGIS StoryMaps for background information and more details. 
+									By documenting contributions and maintaining transparent communication, we ensured a focus on user interface design throughout development. </p>
+								<p>As we near completion, we're excited to unveil our visually appealing and intuitive web platforms. 
+									This project highlights our dedication to delivering impactful solutions that prioritize user experience and accessibility in GIS technology.</p>
+								<p>Whether you're an individual seeking to stay informed or an organization dedicated to disaster preparedness, there are numerous ways to get involved. 
+									Explore our website to learn more about our work, initiatives, and team members.</p>
+							</article>
+
+						<!-- PS -->
+							<article id="problem">
+								<h2 class="major">Problem statement</h2>
+								<h3>Ideal</h3>
+									<p>An available web platform to effectively present multiple live data feeds, focusing on real-time visualization of natural hazards, including wildfires, earthquakes, potential tornados (windspeed) in the United States and Canada.</p>
+								<h3>Reality</h3>
+									<p>The existing available materials lack user-friendliness and accessibility, hindering the public from obtaining and comprehending important information (live updates) regarding natural hazards. </p>
+								<h3>Consequences</h3>
+									<p>The public remains unaware of critical environmental concerns caused by natural hazards, and not getting time-efficient alarms, leading to long-term concerns. </p>
+								<h3>Proposal</h3>
+									<p>Present multiple live natural hazards data with various web platforms effectively.</p>
+								<h3>Technologies</h3>
+									<p>Esri Suites such as ArcGIS Online, ArcGIS Dashboard, ArcGIS Storymap. </p>
+							</article>
+						
+						<!-- Methods -->
+							<article id="methods">
+								<h2 class="major">Methodology</h2>
+								<p>Our project adopted a multifaceted approach by creating web maps, and integrating dashboards and story maps to effectively address our problem statement. </p>
+								<h3>Data Acquisition</h3>
+								<p>To initiate our project, we undertook extensive research to acquire relevant data. 
+									Despite encountering numerous data sources, many were limited to historical events or provided static downloads. 
+									To ensure the continuous relevance and reliability of our information, we actively retrieved live data from ArcGIS Living Atlas. </p>
+							    
+								<h3>Data Processing</h3>
+								<p>Processing data directly on the web as opposed to local files and software was essential, as it allowed seamless integration of various data formats onto web platforms such as AGOL. 
+									Additionally, by processing data online, we ensured accessibility and collaboration among team members.</p>
+								<p>We were able to process various data formats onto the web, including CSV, shapefile, JSON/GeoJSON (feature layer), OGC WFS/WMS web service, file geodatabase, ArcGIS Server web service, OGC API. 
+									Following are some highlights from the importing process.</p>
+								<h4>Comma-separated values (CSV)</h4>
+									<p>We published CSV files as feature layers to augment the functionality and efficacy of our solutions. 
+										The sources were authoritative with high data quality, however, the data were limited to static downloads. Thus, we aborted this option. </p>
+								<h4>Web Feature Service (WFS) and Web Map Service (WMS)</h4>
+									<p>Utilizing WFS and WMS was instrumental in updating the NASA FIRMS live wildfires data. 
+										Through an URL provided by NASA, the data was integrated seamlessly into our platform, ensuring its real-time nature. 
+										Additionally, enabling the "set refresh interval" feature ensures that the data was continuously updated at predefined intervals, maintaining its accuracy.</p>
+									<span class="image main"><img src="images/WFSimport.PNG" alt="" ></span>
+								<h4>Combining Different Datasets Through ArcGIS Merging Tool</h4>
+									<p>We successfully merged multiple layers into one on the web. Here were the steps and a video to follow. </p>
+									<p>Identify the layers you want to merge, which can be feature layers, CSV files, or shapefiles. Add the layers to the Map Viewer. 
+										Next, use the Merge tool in the Analysis tab to combine features from two layers of the same feature type into a new layer. 
+										In the Merge settings, select the fields you want to include and apply settings (rename, remove, or match). 
+										Check the estimated ArcGIS Online credits required before running the analysis. 
+										Save the merged layer to your content. Verify the merged layer and use it in your maps and apps.</p>							
+								<div class="videoContainer">
+								    <video autoplay muted loop>
+								        <source src="images/record.mp4" type="video/mp4">
+								        Your browser does not support the video tag.
+								    </video>
+								</div>
+ 
+								<h4>Masking Features on a Web Map</h4>
+									<p>Masking Features on a Web Map
+										Given that the live earthquake data source encompassed global events, masking techniques on AGOL were employed to focus solely on the US and Canada. 
+										This ensures that our web map provides relevant and localized information to our target audience.</p>
+									<span class="image main"><img src="images/Masking.PNG" alt="" ></span>
+								<h3>Web Platform Production</h3>
+								<p>To enhance user experience, we implemented strategies to dynamically modify the data, including decluttering the map by toggling off unnecessary layers. </p>
+								<p>Please view more details on the "Solution" page. </p>
+								<h3>Story Map</h3>
+								<p>Following the creation of the ArcGIS Dashboard, we used the ArcGIS Platform to create a Story Map that captured the main ideas of our project. 
+									This Story Map was created to improve the user's understanding of our project. We demonstrated how to create an interactive dashboard that displays real-time hazard data and draws boundaries between hazardous circumstances in the USA and Canada. 
+									We utilized maps, multimedia content, textual elements, Dashboard and a variety of other components to construct our Story Map.We wanted to clarify the various advantages that come with using a dashboard with this story. </p>
+								<h3>Concerns and Future Steps</h3>
+								<p>While the NASA FIRMS wildfire data provided live updates, we encountered challenges such as including non-relevant hotspots, like industrial emissions. 
+									In future trials, we aim to refine our data filtering techniques to enhance the accuracy of our visualizations. </p>
+								<p>Moreover, exploring scripting options to actively read updating csv files could further augment our data acquisition capabilities.</p>
+							</article>
+						
+						<!-- About -->
+							<article id="about">
+								<h2 class="major">Deliverables</h2>
+								<p>We intended to deliver two primary outcomes for our project: ArcGIS Dashboards and ArcGIS StoryMaps. The dashboard featured all real-time data integrated into a single web map, offering a user-friendly interface for monitoring forest fires, earthquakes, and tornadoes across the USA and Canada. 
+									We've enhanced the dashboard's interactivity and user-friendliness by incorporating various elements to improve data visualization</p>
+								<h3 class="major"><a href="https://fleming.maps.arcgis.com/apps/dashboards/8a2d1b7e63964577b6f9c015d7551d9a">Natural Hazards Dashboard</a></h3>
+								<span class="image main"><img src="images/DASHBOARDnew.png" alt=""></span>
+								<p> We collected real-time data from various authoritative sources. The earthquakes, forest fires, and tornadoes were from United States Geological Survey (USGS), the National Interagency Fire Center (NIFC), Natural Resource Canada (NRCan), Integrated Reporting of Wildland-Fire Information (IRWIN), and the National Oceanic and Atmospheric Administration (NOAA) respectively. 
+									Through ArcGIS Online and ArcGIS Dashboards, we designed a user-friendly interface with interactive maps, charts, and widgets to visualize key metrics and trends in real-time. Our dashboard updated the latest information continuously, providing timely insights.
+								</p>
+								<p>We had maps on our dashboard displaying real-time data together with various map-enhancing components. The pie chart showcased causes of forest fires in USA, and active fire stages in Canada. More forest fires information like counts and covered area size were included in tables. 
+									The earthquake magnitude across both countries was shown in a bar graph. Storm information for the US was displayed in a line graph and a gauge. There was also a website with weather update on selected locations in Canada. 
+									The interface design for browsing real-time data was straightforward and user-friendly.
+								</p>
+								<h3 class="major"><a href="https://storymaps.arcgis.com/stories/5abc1f17b7b74ac8928e2589fb043d8c">Natural Hazards Story Map</a></h3>
+								<span class="image main"><img src="images/StoryMap.JPG" alt=""></span>
+								 <a href="images/Natural_Hazard_Monitoring.pdf">Download PDF</a>
+                                                                 <button onclick="window.location.href='https://storymaps.arcgis.com/stories/5abc1f17b7b74ac8928e2589fb043d8c;">Click me</button>
+
+								<br>
+								<p> ArcGIS StoryMaps, developed by Esri, is a versatile platform designed for users to craft engaging narratives using maps, text, multimedia content, and various other elements.
+								In our application of ArcGIS StoryMaps, we utilized it to showcase the current hazard conditions in both the USA and Canada. We demonstrated how we created an interactive dashboard to visualize live hazard data, illustrating the potential benefits derived from utilizing a dashboard.
+								</p>
+								<p>The following image shows the map of the active wild fires of USA and Canada. Live data helps in early detection and monitoring of wildfires. It can help to identify areas with high risk and issue timely evacuation orders to ensure public safety.</p>
+								<span class="image main"><img src="images/Wildfire.png" alt=""></span>
+								<p>The next image shows the map of the earthquakes of USA and Canada. Live earthquake data is crucial for early warning systems, helping emergency responders to access the magnitude and location of an earthquake rapidly.</p>
+								<span class="image main"><img src="images/Earthquake.PNG" alt=""></span>
+								<p>The third image shows the map of the storms across the USA and Canada. The live data of windspeed is crucial for issuing early warnings, reducing the potential risk. It helps to access the risk to specific areas, allowing authorities to implement targeted emergency response plans.</p>
+								<span class="image main"><img src="images/Storm.PNG" alt=""></span>
+							</article>
+
+                        
+						<!-- Team -->
+								 <!-- Contact -->
+							 <article id="team">
+    								<h2 class="major">Team</h2>
+    								<div class="team-member">
+        								<div class="member-info">
+            							<img src="images/priyanka.jpg" alt="Team Member 1">
+            							<div class="member-description">
+               							<h3>Priyanka Rathod</h3>
+                						<p>Having prior work experience as a Cartographer at NielsenIQ, Priyanka brings valuable skills and insights to her current pursuit of a GIS Cartographic Specialist program at Fleming Frost Campus. Her tenure at NielsenIQ would have equipped her with practical knowledge in cartography, spatial analysis, and data visualization, all of which are fundamental in the realm of Geographic Information Systems (GIS). Enrolling in the GIS Cartographic Specialist program at Fleming Frost Campus will undoubtedly deepen her expertise and groom her for a thriving career in this field.</p>
+            </div>
+        </div>
+        							<div class="member-info">
+            						<img src="images/Hong.jpg" alt="Team Member 2">
+            						<div class="member-description">
+                					<h3>Qianhui Hong</h3>
+                					<p>Qianhui holds a Bachelor's degree in biology and environmental science from McMaster University, complemented by a concurrent certificate in GIS. 
+								Furthering her expertise, she enrolled in the Application Specialist program at Fleming College, honing more skills in GIS, including web development, cartography, programming, and database management. 
+								Her passion lies in environmental monitoring, management, and conservation, which she seamlessly integrates with her newfound proficiency.</p>
+            </div>
+        </div>
+									<div class="member-info">
+            						<img src="images/kabir.jpg" alt="Team Member 1">
+            						<div class="member-description">
+               						<h3>Yumkhaibam Kabir Ahmad</h3>
+                					<p>Passionate about leveraging Geographic Information Systems (GIS) to understand spatial patterns, solve complex problems, and make informed decisions. With a  foundation in GIS principles and techniques, coupled with hands-on experience in data analysis, mapping,spatial modeling, and Web Technology, I bring a dynamic approach to geographical information management.</p>
+            </div>
+			</div>
+           							 <div class="member-info">
+									<img src="images/Simon.jpg" alt="Team Member 1">
+									<div class="member-description">
+									<h3>Simon Pariyar</h3>
+									<p>Simon Pariyar is presently pursuing studies in the Geographic Information Systems: Cartographic Specialist program at Sir Sandford Fleming College – School of Environmental and Natural Resource Sciences. He holds a Bachelor's degree in Agricultural Engineering, where his introduction to GIS occurred during his final year project thesis, which focused on visualizing groundwater variability. Subsequently, in his professional endeavors at an Engineering firm called Ink Consult Pvt. Ltd, he gained extensive exposure to the field of Spatial Analysis and Mapping. Simon considers the knowledge and skills acquired through his current course as a significant milestone in his career progression.
+</p>
+				</div>
+    </div>
+	</div>
+</article>
+						<!-- Contact Section -->
+								<a href="#Contact" class="clickable-section">
+									 
+								</a>
+								
+
+
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy;2024 Group 11 GEOM99. All rights reserved. Unauthorized use or reproduction of this project is prohibited..</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
