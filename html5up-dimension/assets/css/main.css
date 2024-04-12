@@ -1167,7 +1167,7 @@ input, select, textarea {
 				}
 
 				#header nav ul li a {
-					display: flex;
+					display: block;
 					min-width: 5rem;
 /* 					height: 2.75rem; */
 					line-height: 2.75rem;
